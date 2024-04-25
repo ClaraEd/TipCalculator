@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+      crossorigin="anonymous"
+    />
+    <style>
+      .container {
+        background: linear-gradient(to bottom, #4e54c8, #8f94fb);
+      }
+      .form-group ::placeholder {
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .form-group label {
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .form-control {
+        border: 1px solid black;
+      }
+      #billTotal {
+        background-color: rgb(174, 239, 241);
+        font-weight: bold;
+        color: white;
+      }
+      h5 {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      #tipInput {
+        background-color: rgb(194, 252, 231);
+        color: white;
+        font-weight: bold;
+      }
+      #totalBillWithTip {
+        background-color: #f5afbb; /* Background color */
+      }
+      #tipAmount {
+        background-color: rgb(255, 255, 233);
+      }
+      .input-group-addon {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card card-body text-center mt-5">
+            <h1 class="heading display-5 pv-3">Tip Calculator</h1>
+
+            <form id="tip-form">
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">$</span>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="billTotal"
+                    placeholder="Total Bill"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group tipPersent">
+                <div class="input-group">
+                  <label for="#">Tip:</label>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="tipInput"
+                    value="0"
+                  />
+                  <span class="input-group-addon" id="tipOutput"></span>
+                </div>
+              </div>
+            </form>
+            <hr />
+
+            <!-- Result -->
+            <div id="result" class="pt-4">
+              <h5>Result</h5>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">Tip amount</span>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="tipAmount"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <span class="input-group-addon">Total Bill with Tip</span>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="totalBillWithTip"
+                    disabled
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="tipCal.js"></script>
+  </body>
+</html>
